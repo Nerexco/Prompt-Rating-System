@@ -7,8 +7,13 @@ import ReactPaginate from "react-paginate";
 import { useEffect, useState } from "react";
 import { iArticle } from "../../shared/interfaces";
 import { AiFillCaretRight, AiFillCaretLeft } from "react-icons/ai";
+import SelectComponent from "./SelectComponent";
 
-const BlogIndexPage = ({ articlesPerPage = 6 }: { articlesPerPage?: number }) => {
+const BlogIndexPage = ({
+  articlesPerPage = 6,
+}: {
+  articlesPerPage?: number;
+}) => {
   const router = useRouter();
   const { category, author } = router.query;
   const categoryArticles = SORTED_ARTICLES_BY_DATE.filter(
@@ -53,7 +58,7 @@ const BlogIndexPage = ({ articlesPerPage = 6 }: { articlesPerPage?: number }) =>
           category ? "pt-10" : "pt-14"
         )}
       >
-        {category || author ? (
+        {/* {category || author ? (
           <h1
             className="px-2 mb-[30px] text-[45px] font-bold"
             style={{ textTransform: "capitalize" }}
@@ -61,7 +66,46 @@ const BlogIndexPage = ({ articlesPerPage = 6 }: { articlesPerPage?: number }) =>
             {category || author}
             <hr className="mt-[10px]" />
           </h1>
-        ) : null}
+        ) : null} */}
+
+        <div className="flex flex-wrap">
+          <SelectComponent
+            options={["tdfgdf"]}
+            onChange={() => {}}
+            value={""}
+            label={"Category"}
+            name={"keyWords"}
+            className={"sdfs"}
+          />
+
+          <SelectComponent
+            options={["tdfgdf"]}
+            onChange={() => {}}
+            value={""}
+            label={"Category"}
+            name={"keyWords"}
+            className={"sdfs"}
+          />
+
+          <SelectComponent
+            options={["tdfgdf"]}
+            onChange={() => {}}
+            value={""}
+            label={"Category"}
+            name={"keyWords"}
+            className={"sdfs"}
+          />
+
+          <SelectComponent
+            options={["tdfgdf"]}
+            onChange={() => {}}
+            value={""}
+            label={"Category"}
+            name={"keyWords"}
+            className={"sdfs"}
+          />
+        </div>
+        <hr className="mt-[5px] mb-[15px]" />
 
         <div className="flex flex-wrap">
           {currentItems

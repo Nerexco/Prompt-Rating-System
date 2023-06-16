@@ -24,9 +24,9 @@ import { AiFillGithub, AiOutlineTwitter, AiFillLinkedin, AiFillInstagram, AiFill
  */
 
 export const MAYUR: IAuthor = {
-    name: "Mayur Nalwala",
+    name: "Nerexco",
     designation: "Software Engineer",
-    bio: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+    bio: "Software Company",
     profilePic: "",
     social: [
         {
@@ -41,7 +41,7 @@ export const MAYUR: IAuthor = {
 }
 
 export const RUPALI: IAuthor = {
-    name: "Rupali Yadav",
+    name: "Nuwan Perera",
     designation: "IT Analyst",
     bio: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
     profilePic: "",
@@ -59,8 +59,8 @@ export const RUPALI: IAuthor = {
 
 
 // This can your company name / your name etc for SEO purposes
-export const WEBSITE_NAME: string = 'Next Js Blog Template';
-export const WEBSITE_URL: string = 'https://nextjs-simple-blog-template.web.app/';
+export const WEBSITE_NAME: string = 'Promt Rating App';
+export const WEBSITE_URL: string = '';
 
 /**
  * This is the main navigation setup.
@@ -77,7 +77,7 @@ export const PRIMARY_NAV: iNavSetup = {
     // },
     logo: {
         type: LogoType.TEXT,
-        logo: 'Next Blog',
+        logo: 'Prompt Rating',
     },
     // navLinks are the main navbar links that apper on top of every page
     navLinks: [
@@ -88,23 +88,27 @@ export const PRIMARY_NAV: iNavSetup = {
         {
             // for categories don't add path and add type: dropdown and pass path empty
             label: 'Blog',
-            type: 'dropdown',
-            path: ''
+            type: '',
+            path: '/blog'
         },
         {
             label: 'About Us',
             path: '/about-us'
         },
+        // {
+        //     // to open a link in new tab pass newTab: true
+        //     label: 'Support Us',
+        //     path: 'https://www.buymeacoffee.com/webexpe13z',
+        //     newTab: true
+        // },
+        // {
+        //     label: 'Github Repo',
+        //     path: 'https://github.com/webexpe13/blog-template-using-nextjs-typescript-tailwindcss',
+        //     newTab: true
+        // },
         {
-            // to open a link in new tab pass newTab: true
-            label: 'Support Us',
-            path: 'https://www.buymeacoffee.com/webexpe13z',
-            newTab: true
-        },
-        {
-            label: 'Github Repo',
-            path: 'https://github.com/webexpe13/blog-template-using-nextjs-typescript-tailwindcss',
-            newTab: true
+            label: 'Add Prompt',
+            path: '/add-prompt'
         },
         {
             label: 'Contact Us',
@@ -118,6 +122,10 @@ export const PRIMARY_NAV: iNavSetup = {
             path: '/'
         },
         {
+            label: 'Add Prompt',
+            path: '/add-prompt'
+        },
+        {
             // for categories dont add path and add type: dropdown
             label: 'Blog',
             type: 'dropdown',
@@ -127,41 +135,28 @@ export const PRIMARY_NAV: iNavSetup = {
             label: 'About Us',
             path: '/about-us'
         },
-        {
-            label: 'Support Us',
-            path: 'https://www.buymeacoffee.com/webexpe13z',
-            newTab: true
-        },
-        {
-            label: 'Github Repo',
-            path: 'https://github.com/webexpe13/blog-template-using-nextjs-typescript-tailwindcss',
-            newTab: true
-        },
+        // {
+        //     label: 'Support Us',
+        //     path: 'https://www.buymeacoffee.com/webexpe13z',
+        //     newTab: true
+        // },
+        // {
+        //     label: 'Github Repo',
+        //     path: 'https://github.com/webexpe13/blog-template-using-nextjs-typescript-tailwindcss',
+        //     newTab: true
+        // },
         {
             label: 'Contact Us',
             path: '/contact-us'
         }
     ],
-    socials: [
-        {
-            link: 'https://www.facebook.com/',
-            icon: <AiFillFacebook />
-        },
-        {
-            link: 'https://www.instagram.com/',
-            icon: <AiFillInstagram />
-        },
-        {
-            link: 'https://twitter.com/WebExpe',
-            icon: <AiOutlineTwitter />
-        },
-    ]
+    socials: []
 }
 
 export const DEFAULT_SEO: iSEO = {
-    title: "Nextjs simple blog template",
-    description: "A simple blog template using NextJS and Typescript.",
-    keywords: "Blog, next js, template, next js blog, blog setup, typescript, nextjs typescript, react js blog template, responsive blog template",
+    title: "prompt rating app",
+    description: "prompt rating app",
+    keywords: "prompt rating app",
     url: WEBSITE_URL,
     author: `${MAYUR.name}, ${RUPALI.name}`,
     twitterHandle: '@WebExpe',

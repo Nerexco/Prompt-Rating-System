@@ -78,7 +78,7 @@ const Navbar = () => {
       <nav
         className={combineClasses(
           classes.navbar,
-          "bg-white  dark:bg-slate-900 dark:text-white text-black"
+          "bg-white  dark:bg-slate-900 dark:text-white text-black z-100"
         )}
       >
         {isMobile ? (
@@ -131,7 +131,7 @@ const Navbar = () => {
         )}
       </nav>
 
-      <NavSidebar
+      {/* <NavSidebar
         openSidebar={openSidebar}
         closeNavSidebar={() => setOpenSidebar(false)}
         navSetup={PRIMARY_NAV}
@@ -142,7 +142,7 @@ const Navbar = () => {
       <SocialShareModal
         closeModal={() => setOpenShareModal(false)}
         openShareModal={openShareModal}
-      />
+      /> */}
     </>
   );
 };
